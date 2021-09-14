@@ -1,0 +1,24 @@
+C:\Users\ADMIN>docker pull nginx:1.17.5
+1.17.5: Pulling from library/nginx
+8d691f585fa8: Pull complete
+5b07f4e08ad0: Pull complete
+abc291867bca: Pull complete
+Digest: sha256:922c815aa4df050d4df476e92daed4231f466acc8ee90e0e774951b0fd7195a4
+Status: Downloaded newer image for nginx:1.17.5
+docker.io/library/nginx:1.17.5
+
+C:\Users\ADMIN>docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
+debian       latest    82bd5ee7b1c5   11 days ago     124MB
+nginx        1.17.5    540a289bab6c   23 months ago   126MB
+
+C:\Users\ADMIN>docker run --name my-nginx -d -p 8085:80 -v E:\DESKTOP Details/html:/usr/share/nginx/html nginx:1.17.5
+docker: invalid reference format: repository name must be lowercase.
+See 'docker run --help'.
+
+C:\Users\ADMIN>docker run --name my-nginx -d -p 8085:80 -v E:\DESKTOP Details/basic:/usr/share/nginx/html nginx:1.17.5
+docker: invalid reference format: repository name must be lowercase.
+See 'docker run --help'.
+
+C:\Users\ADMIN>docker run --name my-nginx -d -p 8085:80 -v C:\Users\ADMIN\Desktop\Docker\basic:/usr/share/nginx/html nginx:1.17.5
+5e48f5b5a3975e9d1dafafc2d17ea53663ea2ebe9910c08edd3c125070e23c6f
